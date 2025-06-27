@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0088FF;
+    --secondary-color: #232323;
+    --text-color: #FFFFFF;
+    --background-color: #1C1C1E;
+    --input-border: #333333;
+    --button-color: #0088FF;
+    --button-hover: #3399FF;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    min-height: 80vh;
+    position: relative;
+    z-index: 1;
+    padding: 20px 0;
+}
+
+.left-content {
+    flex: 1;
+    max-width: 480px;
+}
+
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-left: 0;
+}
+
+/* Remove the glow effect completely */
+.right-content::before {
+    display: none;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.app-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    margin-right: 10px;
+}
+
+.app-name {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 46px;
+    line-height: 1.15;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+.subtitle {
+    font-size: 19px;
+    margin-bottom: 45px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.waitlist-form {
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 0;
+}
+
+input[type="email"] {
+    flex: 1;
+    padding: 15px 20px;
+    border: 1px solid var(--input-border);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-color);
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+    outline: none;
+    height: 50px;
+}
+
+input[type="email"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="email"]:focus {
+    border-color: var(--button-color);
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+button {
+    padding: 15px 30px;
+    background-color: var(--button-color);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: 50px;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+.phone-mockup {
+    position: relative;
+    width: 100%;
+    max-width: 290px;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.mockup-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 40px;
+    position: relative;
+    z-index: 1;
+    /* More natural shadow with two layers */
+    box-shadow: none;
+}
+
+#thank-you {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.social-link {
+    margin-top: 45px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.social-link a {
+    color: var(--button-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.social-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 950px) {
+    .container {
+        padding: 0 25px 40px;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+        padding: 40px 0 0;
+        min-height: auto;
+        gap: 40px;
+    }
+    
+    .left-content {
+        text-align: center;
+        order: 0;
+        max-width: 100%;
+    }
+    
+    .right-content {
+        order: 1;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        justify-content: center;
+        padding-left: 0;
+        flex: 1;
+    }
+    
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 25px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .subtitle {
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+    
+    form {
+        flex-direction: column;
+    }
+    
+    input[type="email"] {
+        border-radius: 4px;
+        margin-bottom: 10px;
+        height: 50px;
+    }
+    
+    button {
+        border-radius: 4px;
+        width: 100%;
+        height: 50px;
+    }
+    
+    .phone-mockup {
+        max-width: 300px;
+        margin-right: 0;
+        width: 85%;
+    }
+    
+    .mockup-image {
+        border-radius: 32px;
+    }
+}
+
+/* For even smaller screens */
+@media (max-width: 500px) {
+    .phone-mockup {
+        max-width: 260px;
+        width: 80%;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+}
+
+/* For larger screens */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .content-wrapper {
+        gap: 100px;
+    }
+    
+    .phone-mockup {
+        max-width: 320px;
+    }
+} 
