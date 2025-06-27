@@ -149,10 +149,9 @@ button:hover {
 .phone-mockup {
     position: relative;
     width: 100%;
-    max-width: 290px;
+    max-width: 500px;
     height: auto;
     margin-right: 0;
-    margin-left: 0;
 }
 
 .mockup-image {
@@ -276,7 +275,7 @@ button:hover {
     }
     
     .phone-mockup {
-        max-width: 300px;
+        max-width: 450px;
         margin-right: 0;
         width: 85%;
     }
@@ -289,7 +288,7 @@ button:hover {
 /* For even smaller screens */
 @media (max-width: 500px) {
     .phone-mockup {
-        max-width: 260px;
+        max-width: 380px;
         width: 80%;
     }
     
@@ -313,6 +312,6 @@ button:hover {
     }
     
     .phone-mockup {
-        max-width: 320px;
+        max-width: 550px;
     }
 } 
