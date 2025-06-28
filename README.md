@@ -6,7 +6,7 @@ A clean, minimalist landing page for the Glimpse task manager app.
 
 ## About
 
-Glimpse is a simple and beautiful 7-day planner to organize your life. This landing page provides a preview of the app and a way for users to join the beta waitlist.
+Glimpse is a simple and beautiful task manager to organize your life. This landing page provides a preview of the app and a way for users to join the beta waitlist.
 
 ## Built With
 
